@@ -1,0 +1,275 @@
+{
+  "schema": {
+    "all_required_cols_present": true,
+    "missing_cols": [],
+    "extra_cols": [],
+    "total_columns": 24,
+    "total_rows": 12120,
+    "dtypes": {
+      "customer_id": "object",
+      "bank_code": "object",
+      "age": "float64",
+      "gender": "object",
+      "province": "object",
+      "occupation": "object",
+      "income_month": "float64",
+      "card_type": "object",
+      "open_date": "object",
+      "credit_limit": "float64",
+      "annual_fee_waived": "int64",
+      "utilization_6m": "float64",
+      "txn_count_3m": "int64",
+      "txn_amount_3m": "float64",
+      "spend_change_pct": "float64",
+      "app_logins_30d": "float64",
+      "complaints_12m": "int64",
+      "late_payments_12m": "int64",
+      "salary_via_bank": "object",
+      "other_bank_cards": "float64",
+      "promo_ended_60d": "int64",
+      "last_contact_channel": "object",
+      "currency": "object",
+      "churn_3m": "int64"
+    }
+  },
+  "deduplication": {
+    "raw_rows": 12120,
+    "duplicate_rows_removed": 120,
+    "clean_rows": 12000,
+    "unique_customer_ids": 12000,
+    "remaining_id_duplicates": 0,
+    "is_id_unique": true
+  },
+  "target": {
+    "is_valid_binary": true,
+    "missing_target_count": 0,
+    "value_counts": {
+      "0": 10595,
+      "1": 1405
+    },
+    "churn_rate": 0.11708333333333333,
+    "churn_pct_str": "11.708%"
+  },
+  "missing_summary": {
+    "other_bank_cards": {
+      "missing_count": 2446,
+      "missing_pct": 20.38
+    },
+    "income_month": {
+      "missing_count": 1547,
+      "missing_pct": 12.89
+    },
+    "app_logins_30d": {
+      "missing_count": 1504,
+      "missing_pct": 12.53
+    },
+    "salary_via_bank": {
+      "missing_count": 712,
+      "missing_pct": 5.93
+    },
+    "occupation": {
+      "missing_count": 608,
+      "missing_pct": 5.07
+    },
+    "last_contact_channel": {
+      "missing_count": 508,
+      "missing_pct": 4.23
+    },
+    "age": {
+      "missing_count": 388,
+      "missing_pct": 3.23
+    },
+    "gender": {
+      "missing_count": 229,
+      "missing_pct": 1.91
+    },
+    "province": {
+      "missing_count": 197,
+      "missing_pct": 1.64
+    },
+    "open_date": {
+      "missing_count": 78,
+      "missing_pct": 0.65
+    }
+  },
+  "categories": {
+    "gender": {
+      "total_nulls": 229,
+      "raw_unique_count": 9,
+      "normalized_unique_count": 6,
+      "has_whitespace_variations": true,
+      "has_case_variations": true,
+      "top_values": {
+        "F": 5520,
+        "M": 4728,
+        "female": 277,
+        "male": 275,
+        "F ": 262,
+        "Nữ": 251,
+        "Nam": 233,
+        "nan": 229,
+        "m": 225
+      }
+    },
+    "province": {
+      "total_nulls": 197,
+      "raw_unique_count": 42,
+      "normalized_unique_count": 37,
+      "has_whitespace_variations": true,
+      "has_case_variations": true,
+      "top_values": {
+        "TP.HCM": 2568,
+        "Hà Nội": 2560,
+        "Hải Phòng": 633,
+        "Đà Nẵng": 501,
+        "Bình Dương": 422,
+        "Cần Thơ": 404,
+        "Đồng Nai": 290,
+        "TP HCM": 244,
+        "Ho Chi Minh": 242,
+        "ha noi": 236
+      }
+    },
+    "occupation": {
+      "total_nulls": 608,
+      "raw_unique_count": 16,
+      "normalized_unique_count": 9,
+      "has_whitespace_variations": true,
+      "has_case_variations": true,
+      "top_values": {
+        "salaried": 4636,
+        "self_employed": 2078,
+        "civil_servant": 1069,
+        "other": 986,
+        "retired": 714,
+        "nan": 608,
+        "student": 276,
+        "SALARIED": 266,
+        "Salaried": 258,
+        "salaried ": 250
+      }
+    },
+    "card_type": {
+      "total_nulls": 0,
+      "raw_unique_count": 4,
+      "normalized_unique_count": 4,
+      "has_whitespace_variations": false,
+      "has_case_variations": false,
+      "top_values": {
+        "Cashback": 4993,
+        "Classic": 4758,
+        "Gold": 1847,
+        "Platinum": 402
+      }
+    },
+    "salary_via_bank": {
+      "total_nulls": 712,
+      "raw_unique_count": 3,
+      "normalized_unique_count": 2,
+      "has_whitespace_variations": false,
+      "has_case_variations": false,
+      "top_values": {
+        "N": 7796,
+        "Y": 3492,
+        "nan": 712
+      }
+    },
+    "last_contact_channel": {
+      "total_nulls": 508,
+      "raw_unique_count": 5,
+      "normalized_unique_count": 4,
+      "has_whitespace_variations": false,
+      "has_case_variations": false,
+      "top_values": {
+        "app": 4392,
+        "none": 3404,
+        "branch": 2325,
+        "hotline": 1371,
+        "nan": 508
+      }
+    },
+    "bank_code": {
+      "total_nulls": 0,
+      "raw_unique_count": 1,
+      "normalized_unique_count": 1,
+      "has_whitespace_variations": false,
+      "has_case_variations": false,
+      "top_values": {
+        "VB01": 12000
+      }
+    },
+    "currency": {
+      "total_nulls": 0,
+      "raw_unique_count": 2,
+      "normalized_unique_count": 1,
+      "has_whitespace_variations": false,
+      "has_case_variations": true,
+      "top_values": {
+        "VND": 11940,
+        "vnd": 60
+      }
+    }
+  },
+  "outliers_and_sentinels": {
+    "age": {
+      "nulls": 388,
+      "min": 0.0,
+      "max": 999.0,
+      "sentinel_999_count": 9,
+      "under_18_count": 29,
+      "over_100_count": 40
+    },
+    "income_month": {
+      "nulls": 1547,
+      "median": 17.7,
+      "max": 50500000.0,
+      "recorded_in_raw_vnd_count": 106,
+      "raw_vnd_sample_values": [
+        31000000.0,
+        18000000.0,
+        14800000.0,
+        10000000.0,
+        9500000.0
+      ]
+    },
+    "credit_limit": {
+      "nulls": 0,
+      "median": 40.0,
+      "max": 385000000.0,
+      "recorded_in_raw_vnd_count": 245,
+      "raw_vnd_sample_values": [
+        35000000.0,
+        25000000.0,
+        55000000.0,
+        40000000.0,
+        25000000.0
+      ]
+    },
+    "utilization_6m": {
+      "nulls": 0,
+      "min": -1.0,
+      "max": 15.0,
+      "negative_count": 40,
+      "greater_than_1_count": 45
+    },
+    "txn_amount_3m": {
+      "nulls": 0,
+      "min": -2.99,
+      "max": 462.81,
+      "negative_count": 169,
+      "negative_min": -2.99,
+      "negative_max": -0.12
+    }
+  },
+  "dates": {
+    "open_date": {
+      "total_nulls": 78,
+      "parsed_nulls": 78,
+      "unparseable_count": 0,
+      "min_open_date": "2011-06-21",
+      "max_open_date": "2026-06-12",
+      "snapshot_date": "2026-06-30",
+      "dates_after_snapshot": 0
+    }
+  }
+}
